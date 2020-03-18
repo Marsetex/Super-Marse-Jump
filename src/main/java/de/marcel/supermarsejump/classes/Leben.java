@@ -10,56 +10,56 @@ import javax.imageio.ImageIO;
 
 public class Leben {
 
-    Image leben;
+	Image leben;
 
-    int   anzahlLeben;
+	int anzahlLeben;
 
-    public Leben() {
+	public Leben() {
 
-    }
+	}
 
-    public void initLebenicon() {
+	public void initLebenicon() {
 
-        BufferedImage bImage = null;
-        try {
-            bImage = ImageIO.read(new File("leben.png"));
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        leben = bImage;
-    }
+		BufferedImage bImage = null;
+		try {
+			bImage = ImageIO.read(new File("src/main/resources/leben.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		leben = bImage;
+	}
 
-    public boolean pruefeLeben() {
+	public boolean pruefeLeben() {
 
-        if (anzahlLeben <= 1) {
+		if (anzahlLeben <= 1) {
 
-            return true;
-        } else {
+			return true;
+		} else {
 
-            return false;
-        }
+			return false;
+		}
 
-    }
+	}
 
-    public void setzeLebenaufMax() {
+	public void setzeLebenaufMax() {
 
-        anzahlLeben = 3;
-    }
+		anzahlLeben = 3;
+	}
 
-    public void reduziereLeben() {
+	public void reduziereLeben() {
 
-        anzahlLeben--;
-    }
+		anzahlLeben--;
+	}
 
-    public int gibAnzahlLeben() {
+	public int gibAnzahlLeben() {
 
-        return anzahlLeben;
-    }
+		return anzahlLeben;
+	}
 
-    public void paintLebenicon(Graphics g) {
+	public void paintLebenicon(Graphics g) {
 
-        g.drawString(String.valueOf(anzahlLeben + "x"), 50, 570);
-        g.drawImage(leben, 80, 552, 20, 20, null);
-    }
+		g.drawString(String.valueOf(anzahlLeben + "x"), 50, 570);
+		g.drawImage(leben, 80, 552, 20, 20, null);
+	}
 }
