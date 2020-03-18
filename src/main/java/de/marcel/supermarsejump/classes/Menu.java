@@ -27,8 +27,6 @@ public class Menu {
 			BufferedImage bImage = null;
 			try {
 				File file = new File("src/main/resources/menubilder" + (i + 1) + ".png");
-				System.out.println(file.canRead());
-				System.out.println(file.getAbsolutePath());
 				bImage = ImageIO.read(file);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
