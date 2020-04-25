@@ -5,4 +5,19 @@
 	<groupId>de.marsetex</groupId>
 	<artifactId>SuperMarseJump</artifactId>
 	<version>1.0.0</version>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.8.1</version>
+					<configuration>
+						<compilerVersion>13</compilerVersion>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 </project>

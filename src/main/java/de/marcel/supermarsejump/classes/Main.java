@@ -1,20 +1,20 @@
 package de.marcel.supermarsejump.classes;
 
-import java.applet.Applet;
-import java.applet.AudioClip;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
 
-public class Main extends Applet implements Runnable {
+import javax.swing.JFrame;
+
+public class Main extends JFrame implements Runnable {
 
 	private static final long serialVersionUID = -2865477035409693342L;
 
 	Image dbImage;
 	Graphics dbg;
 
-	AudioClip spiel_song;
+	// AudioClip spiel_song;
 
 	static Boolean aktiv = true, neustart = true;
 
@@ -31,8 +31,7 @@ public class Main extends Applet implements Runnable {
 	Listener derListener = new Listener();
 	Abfragen dieAbfrage = new Abfragen();
 
-	@Override
-	public void init() {
+	public Main() {
 
 		this.setLayout(null);
 		this.setSize(appSizeX, appSizeY);
@@ -58,12 +57,8 @@ public class Main extends Applet implements Runnable {
 		derCharacter.initAnimationen();
 
 		// Init. Audio f�r das Spiel
-		spiel_song = getAudioClip(getCodeBase(), "spiel.wav");
-		spiel_song.loop();
-	}
-
-	@Override
-	public void start() {
+		// spiel_song = getAudioClip(getCodeBase(), "spiel.wav");
+		// spiel_song.loop();
 
 		Thread th = new Thread(this);
 		th.start();
